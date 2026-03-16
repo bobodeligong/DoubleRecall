@@ -1,8 +1,8 @@
-# JSPsych Color Task Demo Experiment
+# JSPsych Color Double Recall Task Demo Experiment
 
-This is a demo jspsych experiment with a continuous report task for color memory (e.g. Zhang & Luck, 2008).
+This is a demo jspsych experiment with two sequential continuous report task for color memory .
 
-The entire demo experiment consists of two short tasks: 1) a "study" task where four images are presented and the participant should study the colors, followed by 2) a "recall" task where the participant uses a color wheel to select the color for each image. The whole demo takes less than a minute.
+The entire demo experiment consists of two short tasks: 1) a "study" task where two color squares are presented and the participant should study the colors, followed by 2) a "recall" task where the participant uses a color wheel to select the color for each color square. The whole demo takes less than a minute.
 
 This is only a demo to provide the plugins to be customized for other experiments. The code would have to be adapted to fit other stimuli, task designs etc.
 
@@ -16,7 +16,7 @@ The **jspsych-snap-keyboard-response.js** plugin is used in the first, "Study" p
 
 As the cursor moves around the wheel, the central svg image changes color. Selecting with the cursor records the selected color.
 
-The selected color and error are recorded (the correct color is given within the task.html script)
+The selected color and error are recorded (the correct color is given within the task-transformed-with-diplay-element.html script)
 
 <img src="readme_contents/color_wheel_trial.gif"  width=50% />
 
@@ -37,12 +37,12 @@ This code is made to demonstrate custom plugins for jspsych.
 This project loads images (the svg files within the images folder), and if you are just running this from local files and not with https, you will get the error about cross origin requests. When it's running online, it'll work. But if you want to test locally and not run into this error, follow the instructions on [this](https://stackoverflow.com/questions/10752055/cross-origin-requests-are-only-supported-for-http-error-when-loading-a-local) page to open up a local web server to let your browser render local files.
 
 
-As in, change directory to the experiment folder, and start a Python web server using either ``` python -m SimpleHTTPServer ``` or ```  python3 -m http.server ```. This will start a web server to host your entire directory listing at ```http://localhost:8000```. From there, run ***task.html***
+As in, change directory to the experiment folder, and start a Python web server using either ``` python -m SimpleHTTPServer ``` or ```  python3 -m http.server ```. This will start a web server to host your entire directory listing at ```http://localhost:8000```. From there, run ***task-transformed-with-diplay-element.html***
 
 ## Contents
 
 
-#### task.html
+#### task-transformed-with-diplay-element.html
 This is the main task. Run this to start the demo experiment (make note of the "note" above if you're running this locally). All other files are called within this one.
 
 
